@@ -1,0 +1,245 @@
+body {
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  background: #0a0f1a;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.glow-bg {
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.04), transparent 70%);
+  z-index: -2;
+}
+
+.magic-cursor {
+  width: 15px;
+  height: 15px;
+  background: rgba(0, 255, 255, 0.7);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.glow-text {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff55;
+}
+
+.fade-in-delay {
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  padding: 30px;
+  width: 400px;
+  max-width: 90%;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
+}
+
+.job-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.job-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.job-card:hover {
+  border-color: #00ffff;
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+}
+
+button {
+  background: #00ffff;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #00e0e0;
+}
+
+.output-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  max-height: 400px;
+  overflow-y: auto;
+  color: #ddd;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+.shortlist-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shortlist-row {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.short-serial {
+  width: 40px;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.shortlist-row:hover {
+  background-color: rgba(255, 255, 255, 0.09);
+}
+
+.short-id {
+  flex: 1;
+  font-weight: 600;
+  color: #00ffff;
+}
+
+.short-email {
+  flex: 2;
+  word-break: break-word;
+  color: #ccc;
+}
+
+.short-score {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+footer {
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.fade-in {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.delay {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.shortlist-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.shortlist-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.shortlist-row:hover {
+  background-color: rgba(255, 255, 255, 0.09);
+}
+
+.short-id {
+  flex: 1;
+  font-weight: 600;
+  color: #00ffff;
+}
+
+.short-email {
+  flex: 2;
+  word-break: break-word;
+  color: #ddd;
+}
+
+.short-score {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+  color: #ffffff;
+}
